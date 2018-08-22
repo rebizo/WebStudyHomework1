@@ -1,1 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea/codeStyles/
+.idea/dbnavigator.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/workspace.xml
+out/
