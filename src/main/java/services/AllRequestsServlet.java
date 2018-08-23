@@ -1,4 +1,3 @@
-/*
 package services;
 
 import templater.PageGenerator;
@@ -16,9 +15,20 @@ public class AllRequestsServlet extends HttpServlet {
                       HttpServletResponse response) throws ServletException, IOException {
 
         Map<String, Object> pageVariables = createPageVariablesMap(request);
-        pageVariables.put("message", "");
+        pageVariables.put("value", "");
 
-        response.getWriter().println(PageGenerator.instance().getPage("page.html", pageVariables));
+        //response.getWriter().println(PageGenerator.instance().getPage("page.html", pageVariables));// HEAR
+        //response.getWriter().println(pageVariables.get("value"));
+        //response.getWriter().println(request.getParameter("key"));
+
+        if (pageVariables.containsKey("value")) {
+            //response.getWriter().println(pageVariables.get("value"));
+            response.getWriter().println(request.getParameter("key"));
+        } else {
+            return;
+            //response.getWriter().println(PageGenerator.instance().getPage("page.html", pageVariables));
+            //response.getWriter().println("value");
+        }
 
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
@@ -53,4 +63,3 @@ public class AllRequestsServlet extends HttpServlet {
         return pageVariables;
     }
 }
-*/
