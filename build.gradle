@@ -105,6 +105,7 @@ task customFatJar(type: Jar) {
         //testCompile group: 'junit', name: 'junit', version: '4.12'
 
         compile group: 'org.eclipse.jetty', name: 'jetty-webapp', version: '9.4.12.RC2'
+        compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.12.RC2'
 
         compile group: 'freemarker', name: 'freemarker', version: '2.3.9'
 
